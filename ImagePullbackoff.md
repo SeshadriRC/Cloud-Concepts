@@ -12,6 +12,7 @@ The BackOff part indicates that Kubernetes will keep trying to pull the image, w
 Kubernetes raises the delay between each attempt until it reaches a compiled-in limit, which is 300 seconds (5 minutes).
 
 🔑 What is imagePullSecret?
+
 It is a Kubernetes Secret of type kubernetes.io/dockerconfigjson (or the older dockercfg type), which contains credentials for accessing a private image registry such as:
 
 Red Hat Quay
