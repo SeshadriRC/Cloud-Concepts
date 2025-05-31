@@ -83,3 +83,99 @@ Use startupProbe for apps with long initialization times.
 Monitor probe failures via oc describe pod <pod> and logs.
 
 Avoid heavy work in health endpoints.
+
+**1. Readiness Probe Failure**
+   
+❗ What happens:
+Pod stays in Running state but is not added to the service endpoint list, so it receives no traffic.
+
+🛠️ Common Causes & Fixes:
+
+Cause	Fix
+
+App not ready quickly enough	Increase initialDelaySeconds
+
+Wrong path or port	Verify correct health check path and container port
+
+Endpoint returns non-2xx	Update app to return HTTP 200 when ready
+
+Resource limits too low	Increase CPU/memory requests/limits
+
+Slow response	Increase timeoutSeconds or tune periodSeconds
+
+**🔥 2. Liveness Probe Failure**
+
+❗ What happens:
+Pod is automatically restarted by OpenShift.
+
+🛠️ Common Causes & Fixes:
+
+Cause	Fix
+Temporary app spike or slowness	Increase failureThreshold or timeoutSeconds
+App enters a bad state	Fix app logic to recover or expose better health endpoint
+Wrong probe endpoint	Check the HTTP/TCP command or path is accessible
+Port misconfiguration	Ensure the container port is exposed and correct
+Heavy GC or IO wait	Optimize app performance or resources
+
+🚀 3. Startup Probe Failure
+
+❗ What happens:
+
+Pod never transitions to ready, and OpenShift may restart it depending on thresholds.
+
+🛠️ Common Causes & Fixes:
+
+Cause	Fix
+
+App has long init time	Increase failureThreshold and periodSeconds
+
+Incorrect health endpoint	Validate /startup or /health path
+
+Database or service dependency delay	Delay startup probe until dependencies are ready
+
+CPU starvation	Increase resource requests during startup
+
+🧪 4. Command-based Probe Failures
+
+Probes can be exec commands (not just HTTP or TCP).
+
+❗ What happens:
+
+If the command exits non-zero, the probe fails.
+
+🛠️ Common Fixes:
+
+Cause	Fix
+
+Command not found	Use full paths like /bin/ls, avoid aliases
+
+Non-zero exit code	Test command manually inside container
+
+Permission issues	Ensure the container user has access to the command
+
+📘 Example of All Three Probes:
+
+```
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: 8080
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  timeoutSeconds: 3
+
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: 8080
+  initialDelaySeconds: 15
+  periodSeconds: 5
+  timeoutSeconds: 2
+
+startupProbe:
+  httpGet:
+    path: /startup
+    port: 8080
+  failureThreshold: 30
+  periodSeconds: 10
+```
