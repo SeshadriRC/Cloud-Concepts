@@ -26,31 +26,29 @@ AWS ECR, Azure ACR, GCR, etc.
 When you want OpenShift to deploy an image from a private registry, you need to tell it how to authenticate with that registry. That’s where imagePullSecret is used.
 
 🔧 How to Create One
-bash
-Copy
-Edit
+```
 oc create secret docker-registry my-pull-secret \
   --docker-server=REGISTRY_URL \
   --docker-username=USERNAME \
   --docker-password=PASSWORD \
   --docker-email=EMAIL
-
+```
   
 🔗 How to Use It
 
 1. Link it to a ServiceAccount
+   
 To make all pods use it:
 
 ```
 oc secrets link default my-pull-secret --for=pull
 
 ```
-default is the default service account used by most pods unless another is specified.
+**default** is the default service account used by most pods unless another is specified.
 
 2. Specify in a Pod or Deployment YAML
-yaml
-Copy
-Edit
+   
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -62,4 +60,4 @@ spec:
   imagePullSecrets:
   - name: my-pull-secret
 
-  - 
+```
