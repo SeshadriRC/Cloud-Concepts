@@ -20,6 +20,10 @@ The application team was unable to deploy the application as it required a large
 
 The database was initially running on a db.t4g.large instance type. Due to low activity, Turbonomic automatically scaled it down to a db.t4g.medium instance. Following the scale-down, the database became inaccessible due to an incompatible parameter state—hugepages was set to ON, which is not supported on the medium instance type. To resolve the issue, we set the hugepages parameter to OFF followed by a database reboot. After the reboot, the database became accessible.
 
+https://aws.amazon.com/rds/instance-types/
+
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/PostgreSQL.Concepts.General.FeatureSupport.HugePages.html
+
 **Not able to take DB snapshot**
 
 We were unable to take a snapshot of the database as the snapshot limit (100) had already been reached. There were 100 snapshots across various databases. To resolve this, we raised a case with the AWS vendor, and they subsequently increased the snapshot limit from 100 to 200.
