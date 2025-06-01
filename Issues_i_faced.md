@@ -1,6 +1,7 @@
 
 
 [Openshift issue](#Openshift-issue)
+[Database issue](#Database-issue)
 
 ## Openshift issue
 
@@ -11,4 +12,6 @@ We observed a CrashLoopBackOff in the pod due to an OOMKilled event. We informed
 **Quota issue**
 
 The application team was unable to deploy the application as it required a large resource quota, while the namespace was allocated with a medium quota. To address this, we increased the quota from medium to large. After the update, the issue was resolved.
+
+## Database issue
 
