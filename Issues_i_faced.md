@@ -30,3 +30,5 @@ The database became inaccessible due to full storage. To resolve the issue, we i
 **Turbonomics activity**
 
 user initially allocated a **db.t4g.2xlarge** instance type to the database, anticipating high resource consumption. However, as the resource usage remained low over time, Turbonomic automatically downgraded the instance type to **db.t4g.large**.
+
+We will be checking the yaml of postgres CR
