@@ -15,4 +15,9 @@ The application team was unable to deploy the application as it required a large
 
 ## Database issue
 
+**Turbonomics activity**
 user initially allocated a **db.t4g.2xlarge** instance type to the database, anticipating high resource consumption. However, as the resource usage remained low over time, Turbonomic automatically downgraded the instance type to **db.t4g.large**.
+
+**HugePages**
+
+The database was initially running on a db.t4g.large instance type. Due to low activity, Turbonomic automatically scaled it down to a db.t4g.medium instance. Following the scale-down, the database became inaccessible due to an incompatible parameter state—hugepages was set to ON, which is not supported on the medium instance type. To resolve the issue, we set the hugepages parameter to OFF followed by a database reboot. After the reboot, the database became accessible.
