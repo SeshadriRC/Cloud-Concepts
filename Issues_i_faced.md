@@ -15,3 +15,4 @@ The application team was unable to deploy the application as it required a large
 
 ## Database issue
 
+user initially allocated a **db.t4g.2xlarge** instance type to the database, anticipating high resource consumption. However, as the resource usage remained low over time, Turbonomic automatically downgraded the instance type to **db.t4g.large**.
