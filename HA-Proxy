@@ -1,0 +1,73 @@
+### 🔹 What is HAProxy in OpenShift?
+
+**HAProxy** in OpenShift acts as the **default router**. It is responsible for **routing external traffic** to the correct **services/pods inside the cluster**.
+
+HAProxy = **High Availability Proxy**
+It's a **load balancer and reverse proxy** that OpenShift uses to expose applications running inside the cluster to the outside world.
+
+---
+
+### 🔸 Where is HAProxy used in OpenShift?
+
+In OpenShift, HAProxy runs as a **router pod** inside the **`openshift-ingress`** or **`openshift-ingress-operator`** namespace.
+
+When a user accesses a route like:
+
+```
+https://myapp.example.com
+```
+
+OpenShift's HAProxy router:
+
+1. Receives the request.
+2. Matches it to the correct **Route object**.
+3. Forwards it to the appropriate **Service**, which sends traffic to the **Pod**.
+
+---
+
+### 🔸 Example Scenario
+
+Let’s say you create a route for your web app:
+
+```yaml
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: myapp
+spec:
+  host: myapp.example.com
+  to:
+    kind: Service
+    name: myapp-service
+```
+
+When someone opens `https://myapp.example.com`, HAProxy:
+
+* Sees the incoming request.
+* Checks if the hostname matches a known route.
+* Forwards traffic to `myapp-service`, which sends it to the pod.
+
+---
+
+### 🔸 Features of HAProxy in OpenShift
+
+| Feature                | Description                            |
+| ---------------------- | -------------------------------------- |
+| **TLS Termination**    | Supports edge, passthrough, re-encrypt |
+| **Load Balancing**     | Balances traffic across multiple pods  |
+| **Path-based Routing** | Supports routing based on URL paths    |
+| **Sticky Sessions**    | Optional session persistence (cookies) |
+| **Health Checks**      | Skips unhealthy pods while routing     |
+
+---
+
+### 🔸 Summary
+
+* **HAProxy** is OpenShift's **default router**.
+* Handles **ingress traffic** to your apps.
+* Works based on **Route objects** you define.
+* Supports load balancing, TLS termination, and more.
+
+---
+
+Let me know if you want to see logs, debug routing issues, or customize the HAProxy configuration in OpenShift.
