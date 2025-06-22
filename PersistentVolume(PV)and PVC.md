@@ -136,6 +136,11 @@ spec:
 
 ---
 
+| Access Mode     | Who can access the volume?       | Real-world analogy            |
+| --------------- | -------------------------------- | ----------------------------- |
+| `ReadWriteOnce` | One pod on one node (read/write) | One person editing a notebook |
+| `ReadOnlyMany`  | Many pods (read-only)            | Everyone reading a book       |
+| `ReadWriteMany` | Many pods (read/write)           | Shared Google Doc             |
 
 
 
