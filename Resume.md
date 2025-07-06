@@ -3,3 +3,4 @@
 - Assist application team on resolving issues with pods like crash loopback, image pull back and other errors- Assist in implementing best practices to configure readiness and liveness probes.
 - Perform Daily health check of cluster and fix issues based on observations & implement and customize Grafana dashboards if required to effectively monitor the cluster.
 - Manage, Modify SCC based on custom requirement and assign to specific projects and perform certificate management when the existing certificates expired and when needed.
+- Provide credentails using Hashicorp vault, editing role properties , Label update ,namespace deletion
