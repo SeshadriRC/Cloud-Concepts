@@ -13,3 +13,4 @@
 - Proficient in at least one backend language (Java, Go, Node.js, or Python).
 - Experience with Docker, Helm charts, and Kubernetes Operators.
 - Familiarity with GitOps, CI/CD pipelines (Jenkins, Tekton), and container registries
+- Provide technical support for cloud-related issues and incidents.
