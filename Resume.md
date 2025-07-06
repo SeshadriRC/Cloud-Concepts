@@ -5,3 +5,5 @@
 - Manage, Modify SCC based on custom requirement and assign to specific projects and perform certificate management when the existing certificates expired and when needed.
 - Provide credentails using Hashicorp vault, editing role properties , Label update ,namespace deletion
 - Good handson both in openshift cli and console
+- Familiar with Kubernetes Custom Resource Definition (CRDs) concepts
+- Enabling and Disabling Argo on the namespace
