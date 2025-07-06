@@ -14,3 +14,16 @@
 - Experience with Docker, Helm charts, and Kubernetes Operators.
 - Familiarity with GitOps, CI/CD pipelines (Jenkins, Tekton), and container registries
 - Provide technical support for cloud-related issues and incidents.
+- hand on exprience on scheduling of containers on worker nodes , load balancing, distribution, Checking health of PODS
+- Deploy Standalone Application
+- ConfigMaps and Secrets
+- Kubernetes Volume Management
+- setting up Setting Up a Single Node and multinode Kubernetes Clusters
+- Creation and managing Namespaces.
+- Good understanding on Ingress and troubleshooting issue involving communication failures.
+- Should have good knowledge on O/s Hardening especially on Linux o/s level.
+- Troubleshoot the application issues in Red Hat OpenShift Container Platform environment.
+- Assistance to applications in change, migrations and assistance to build their images and develop their application topology.
+- Platform Upgrades and Cert Managements.
+- Knowledge, skills and abilities to manage container image repositories in support of Linux Containers.
+- Good Knowledge on narrowing down the RCA's.
