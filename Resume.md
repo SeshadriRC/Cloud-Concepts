@@ -1,0 +1,5 @@
+- Troubleshoot issues with worker nodes, maintenance, and scale-out tasks.
+- Performing Maintenance activities on cluster line performing patching, configuration changes, installing operators etc.
+- Assist application team on resolving issues with pods like crash loopback, image pull back and other errors- Assist in implementing best practices to configure readiness and liveness probes.
+- Perform Daily health check of cluster and fix issues based on observations & implement and customize Grafana dashboards if required to effectively monitor the cluster.
+- Manage, Modify SCC based on custom requirement and assign to specific projects and perform certificate management when the existing certificates expired and when needed.
