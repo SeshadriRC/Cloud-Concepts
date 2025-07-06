@@ -7,3 +7,9 @@
 - Good handson both in openshift cli and console
 - Familiar with Kubernetes Custom Resource Definition (CRDs) concepts
 - Enabling and Disabling Argo on the namespace
+- have in-depth knowledge of Kubernetes/OpenShift platforms and hands-on experience building and deploying microservices in enterprise environments.
+- Hands-on experience with Red Hat OpenShift (v4.x preferred) and Kubernetes.
+- Strong knowledge of microservices design patterns, RESTful APIs, and container orchestration.
+- Proficient in at least one backend language (Java, Go, Node.js, or Python).
+- Experience with Docker, Helm charts, and Kubernetes Operators.
+- Familiarity with GitOps, CI/CD pipelines (Jenkins, Tekton), and container registries
