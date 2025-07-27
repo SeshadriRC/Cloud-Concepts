@@ -1,8 +1,9 @@
 - Troubleshoot issues with worker nodes, maintenance, and scale-out tasks.
 - Deploy, manage, and maintain apps on OpenShift v4.x.
+- Troubleshoot container, pod, and node-level issues in OpenShift.
+- Provision of resources using Cloudformation
 - Manage Operators, Helm charts, and OpenShift GitOps (Argo CD).
 - Implement patching, upgrades, and security hardening of OCP clusters and RHEL hosts.
-- Troubleshoot container, pod, and node-level issues in OpenShift.
 - Work with CI/CD pipelines integrated with OpenShift.
 - Manage user access, role-based access control (RBAC), and cluster configurations.
 - Perform OCP upgrades, patching, and troubleshooting.
