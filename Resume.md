@@ -1,4 +1,7 @@
 - Troubleshoot issues with worker nodes, maintenance, and scale-out tasks.
+- Assisting development teams with deploying and managing their applications on OpenShift.
+- Guiding developers on OpenShift best practices for containerization, application design, and resource utilization.
+- Providing direct support to developers for their application deployment and runtime issues.
 - Deploy, manage, and maintain apps on OpenShift v4.x.
 - Troubleshoot container, pod, and node-level issues in OpenShift.
 - Provision of resources using Cloudformation
