@@ -41,3 +41,5 @@ What i have done
 2. Provided credentials of database using hashicorp
 3. Provision of resource using cloud formation
 4. S3 bucket creation, uploading dumps in S3 bucket and deletion of files
+5. Quota modifictions ( from small to large )
+6. Namespace deletion 
