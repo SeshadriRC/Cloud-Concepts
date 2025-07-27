@@ -35,3 +35,9 @@
 - Platform Upgrades and Cert Managements.
 - Knowledge, skills and abilities to manage container image repositories in support of Linux Containers.
 - Good Knowledge on narrowing down the RCA's.
+
+What i have done
+1. Pod got in stuck state , so i terminated gracefully
+2. Provided credentials of database using hashicorp
+3. Provision of resource using cloud formation
+4. S3 bucket creation, uploading dumps in S3 bucket and deletion of files
