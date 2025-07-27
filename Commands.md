@@ -8,3 +8,6 @@
 
 ``oc delete pod <pod_name> -n <namespace_name> --force=true --grace-period=0``
 
+**PVC**
+
+``oc describe pvc <pvc_name>``
