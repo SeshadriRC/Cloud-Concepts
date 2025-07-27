@@ -1,3 +1,7 @@
+**Cluster operators**
+
+`` oc get co ``
+
 **Pod**
 
 ``oc get pods``
