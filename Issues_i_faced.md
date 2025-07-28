@@ -6,6 +6,10 @@
 
 ## Openshift issue
 
+**Connection timeouts**
+
+we will ask app team to increase a ha proxy annotation timeout
+
 **Image Pull back off**
 
 We will ask the app team to use correct image
