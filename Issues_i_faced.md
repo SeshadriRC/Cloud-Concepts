@@ -6,6 +6,14 @@
 
 ## Openshift issue
 
+**Image Pull back off**
+
+We will ask the app team to use correct image
+
+**Probe Failures**
+
+we will ask the application team to configure probes properly
+
 **Pod crashloopback off**
 
 We observed a CrashLoopBackOff in the pod due to an OOMKilled event. We informed the application team and instructed them to allocate sufficient memory.
