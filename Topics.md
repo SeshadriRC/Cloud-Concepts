@@ -6,3 +6,6 @@
 - Routes
 - SCC
 - Services
+
+
+What is rejected route
