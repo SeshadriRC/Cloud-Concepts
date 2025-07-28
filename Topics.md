@@ -1,4 +1,6 @@
 - Deployment Strategies
+- HA proxy
+- Ingress controllers
 - Nodes / Machines / Machinesets / MachineAutoscalers
 - Operators
 - PV and PVC
