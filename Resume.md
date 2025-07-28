@@ -47,4 +47,4 @@ What i have done
 5. Quota modifictions ( from small to large )
 6. Namespace deletion
 7. Roles and Rolebinding creation
-8. Scale up the machineset
+8. Scale up the machineset because of insufficient CPU
