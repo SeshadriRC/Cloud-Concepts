@@ -48,3 +48,4 @@ What i have done
 6. Namespace deletion
 7. Roles and Rolebinding creation
 8. Scale up the machineset because of insufficient CPU
+9. RDS DB creation and Deletion
