@@ -1,4 +1,5 @@
 - Deployment Strategies
+- Nodes / Machines / Machinesets / MachineAutoscalers
 - PV and PVC
 - Roles and Role bindings
 - Routes
