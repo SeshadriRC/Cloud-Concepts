@@ -1,3 +1,4 @@
+- Ephemeral Storage
 - Deployment Strategies
 - HA proxy
 - Ingress controllers
