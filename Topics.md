@@ -10,6 +10,7 @@
 - Routes
 - SCC
 - Services
+- Secrets and its types
 
 
 What is rejected route
