@@ -51,3 +51,4 @@ What i have done
 9. RDS DB creation and Deletion
 10. DB parameter group creation
 11. Cordon/drain the node
+12. User have done the upgrade, but it had not reflected in OCP console
