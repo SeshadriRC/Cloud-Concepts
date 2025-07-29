@@ -50,3 +50,4 @@ What i have done
 8. Scale up the machineset because of insufficient CPU
 9. RDS DB creation and Deletion
 10. DB parameter group creation
+11. Cordon/drain the node
