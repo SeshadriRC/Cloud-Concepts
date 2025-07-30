@@ -53,3 +53,4 @@ What i have done
 11. Cordon/drain the node
 12. User have done the upgrade, but it had not reflected in OCP console
 13. DBparametergroup quota exceeded, so we need to go AWS services and need to submit the request
+14. Worker node resizing
