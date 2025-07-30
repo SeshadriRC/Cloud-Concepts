@@ -13,6 +13,6 @@
 - SCC
 - Services
 - Secrets and its types
-
+- UID in pod
 
 What is rejected route
