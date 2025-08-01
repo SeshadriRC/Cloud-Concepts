@@ -14,6 +14,8 @@
 
 ``oc logs <pod-name> -c <container-name> -n <namespace>``
 
+`` oc logs -f <pod-name> -n <namespace> ``
+
 **PVC**
 
 ``oc describe pvc <pvc_name>``
