@@ -1,3 +1,4 @@
+
 To deploy a web application in OpenShift from a **private JFrog repository**, you need to follow these steps in **sequence**. This assumes your application is packaged as a container image and stored in **JFrog Artifactory**.
 
 ---
