@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+``apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-webapp
@@ -17,7 +17,7 @@ spec:
         - name: my-webapp
           image: mycompany.jfrog.io/my-repo/my-app:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8080``
 
 -------------------------------------------------------------------------------------------------------
 
