@@ -531,7 +531,7 @@ Let me know:
 
 I'll tailor the pipeline for that.
 
-3. Application Deployment flow with using Jenkins/Helm/Argo
+## Application Deployment flow with using Jenkins/Helm/Argo
 
 
 Image
