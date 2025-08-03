@@ -132,3 +132,57 @@ oc get routes -n application-stage
 ---
 
 Let me know if your app is not in container form and needs to be built from source instead.
+
+The command you posted:
+
+```sh
+oc create secret docker-registry jfrog-secret \
+  --docker-server=mycompany.jfrog.io \
+  --docker-username=<your-username> \
+  --docker-password=<your-password-or-api-key> \
+  --docker-email=<your-email> \
+  -n application-stage
+```
+
+is used to **create a Docker registry secret** in OpenShift (or Kubernetes) that stores credentials for pulling images from a **private container registry**, in this case, **JFrog Artifactory**.
+
+---
+
+### 🔍 Explanation of Each Part:
+
+| Part                                           | Meaning                                                                                 |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `oc create secret docker-registry`             | Command to create a secret of type `docker-registry`.                                   |
+| `jfrog-secret`                                 | Name of the secret you’re creating. You can refer to this in your deployment/pod YAMLs. |
+| `--docker-server=mycompany.jfrog.io`           | URL of your JFrog Artifactory (or Docker registry).                                     |
+| `--docker-username=<your-username>`            | Your Artifactory username.                                                              |
+| `--docker-password=<your-password-or-api-key>` | Your password or API key for authentication.                                            |
+| `--docker-email=<your-email>`                  | Your email address (required by the Docker config, but not validated).                  |
+| `-n application-stage`                         | The namespace where the secret should be created.                                       |
+
+---
+
+### 📦 Use Case:
+
+If your image is stored in a **private JFrog registry**, OpenShift needs credentials to pull it. This secret provides those credentials.
+
+---
+
+### ✅ Next Step: Link the Secret to Your Deployment
+
+Once this secret is created, you need to reference it in your deployment YAML like this:
+
+```yaml
+spec:
+  template:
+    spec:
+      imagePullSecrets:
+        - name: jfrog-secret
+```
+
+This tells the pod to use `jfrog-secret` when pulling images.
+
+---
+
+Let me know if you want a full deployment YAML with the secret referenced.
+
