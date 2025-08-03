@@ -1,7 +1,7 @@
 Image
 
 
-#### **Image**
+## **Image**
 
 The **image name** refers to the **full path of the container image** stored in your **private JFrog registry**. The format is:
 
