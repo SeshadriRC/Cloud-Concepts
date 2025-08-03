@@ -1,3 +1,262 @@
+1. Application Deployment without using Jenkins - Python(#application-deployment-without-using-jenkins---python)
+
+## **Application Deployment without using Jenkins - Python**
+
+Absolutely! Let’s break it down **step-by-step** from scratch — no prior containerization knowledge required.
+
+---
+
+## 🧠 What is Containerization?
+
+Think of **containerization** like boxing your application with everything it needs (code, runtime, libraries) — so it can run **anywhere** (your laptop, OpenShift, cloud) **without breaking**.
+
+This "box" is called a **Docker image**, and when you run it, it's called a **container**.
+
+---
+
+## ✅ Real-World Analogy
+
+* Your app → A meal you cooked
+* Container → A lunchbox (with your meal + spoon + napkin)
+* Dockerfile → The recipe to build your lunchbox
+* Docker image → The lunchbox
+* Container → The meal being eaten
+* JFrog → A lunch storage fridge
+* OpenShift → A canteen serving the lunchbox
+
+---
+
+## 💻 Let’s Containerize a Simple Web App
+
+We’ll take a basic Python web app and:
+
+1. Build it into a Docker image
+2. Push it to JFrog
+3. Deploy it in OpenShift
+4. Make it accessible to users
+
+---
+
+## 🔨 Step 1: Create Your Simple Web App
+
+Create a folder:
+
+```bash
+mkdir my-webapp && cd my-webapp
+```
+
+Now create a file `app.py`:
+
+```python
+# app.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello from containerized app!"
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
+```
+
+Now create a file `requirements.txt`:
+
+```
+flask
+```
+
+---
+
+## 📦 Step 2: Create the Dockerfile (the recipe)
+
+Create a file named `Dockerfile` (no extension):
+
+```Dockerfile
+# Use Python image from Docker Hub
+FROM python:3.9
+
+# Set working directory inside the container
+WORKDIR /app
+
+# Copy code and requirements
+COPY . .
+
+# Install required Python packages
+RUN pip install -r requirements.txt
+
+# Expose the port
+EXPOSE 8080
+
+# Command to run the app
+CMD ["python", "app.py"]
+```
+
+This file tells Docker:
+
+* Use Python
+* Copy the app inside
+* Install Flask
+* Run `app.py`
+
+---
+
+## 🏗️ Step 3: Build the Docker Image
+
+Make sure Docker is installed and running.
+
+Run:
+
+```bash
+docker build -t my-webapp:latest .
+```
+
+✅ This creates the Docker image on your local system.
+
+---
+
+## 🔐 Step 4: Tag and Push to JFrog
+
+### Step 4.1: Tag the image for your JFrog repository
+
+Example:
+
+```bash
+docker tag my-webapp:latest mycompany.jfrog.io/my-docker-repo/my-webapp:v1
+```
+
+Replace with your JFrog domain and repo name.
+
+### Step 4.2: Login to JFrog
+
+```bash
+docker login mycompany.jfrog.io
+```
+
+Use your JFrog **username** and **API key** or **password**.
+
+### Step 4.3: Push the image
+
+```bash
+docker push mycompany.jfrog.io/my-docker-repo/my-webapp:v1
+```
+
+✅ This stores your image in JFrog.
+
+---
+
+## 🚀 Step 5: Deploy to OpenShift
+
+We’ll deploy it to your `application-stage` namespace.
+
+### Step 5.1: Create image pull secret
+
+```bash
+oc create secret docker-registry jfrog-secret \
+  --docker-server=mycompany.jfrog.io \
+  --docker-username=<your-username> \
+  --docker-password=<your-password-or-api-key> \
+  --docker-email=<your-email> \
+  -n application-stage
+```
+
+### Step 5.2: Link the secret to default service account
+
+```bash
+oc secrets link default jfrog-secret --for=pull -n application-stage
+```
+
+### Step 5.3: Create deployment YAML (`deployment.yaml`)
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-webapp
+  namespace: application-stage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-webapp
+  template:
+    metadata:
+      labels:
+        app: my-webapp
+    spec:
+      containers:
+        - name: my-webapp
+          image: mycompany.jfrog.io/my-docker-repo/my-webapp:v1
+          ports:
+            - containerPort: 8080
+```
+
+```bash
+oc apply -f deployment.yaml
+```
+
+### Step 5.4: Create a service
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-webapp-service
+  namespace: application-stage
+spec:
+  selector:
+    app: my-webapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+```
+
+```bash
+oc apply -f service.yaml
+```
+
+### Step 5.5: Expose it via Route
+
+```bash
+oc expose service my-webapp-service -n application-stage
+```
+
+Get the route:
+
+```bash
+oc get route -n application-stage
+```
+
+Open the URL in your browser — 🎉 You should see:
+
+```
+Hello from containerized app!
+```
+
+---
+
+## 🧾 Summary
+
+| Step | Task                 |
+| ---- | -------------------- |
+| 1    | Write app (`app.py`) |
+| 2    | Create `Dockerfile`  |
+| 3    | Build Docker image   |
+| 4    | Push image to JFrog  |
+| 5    | Deploy to OpenShift  |
+| 6    | Access app via Route |
+
+---
+
+Let me know:
+
+* If you want me to generate all the files for you
+* Or if your app is in a different language (like Java, Node.js, etc.)
+
+I’ll guide you accordingly.
+
+
 Image
 
 
