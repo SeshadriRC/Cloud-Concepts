@@ -3,6 +3,49 @@ Image
 
 #### **Image**
 
+The **image name** refers to the **full path of the container image** stored in your **private JFrog registry**. The format is:
+
+```
+<registry-url>/<repository>/<image-name>:<tag>
+```
+
+---
+
+### 🔍 Example (JFrog-hosted image):
+
+If your JFrog Artifactory is hosted at:
+`mycompany.jfrog.io`
+
+And your Docker repository in JFrog is:
+`my-docker-repo`
+
+And your image is:
+`my-webapp`
+And tag is:
+`v1.0.3`
+
+Then the full **image name** is:
+
+```bash
+mycompany.jfrog.io/my-docker-repo/my-webapp:v1.0.3
+```
+
+---
+
+### 🔐 Important:
+
+* This image must be **pullable** using your credentials.
+* You can verify this by doing a local `docker pull`:
+
+```bash
+docker login mycompany.jfrog.io
+docker pull mycompany.jfrog.io/my-docker-repo/my-webapp:v1.0.3
+```
+
+---
+
+
+
 To deploy a web application in OpenShift from a **private JFrog repository**, you need to follow these steps in **sequence**. This assumes your application is packaged as a container image and stored in **JFrog Artifactory**.
 
 ---
