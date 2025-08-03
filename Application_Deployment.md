@@ -1,4 +1,5 @@
 1. [Application Deployment without using Jenkins - Python](#application-deployment-without-using-jenkins---python)
+2. [Application Deployment flow with using Jenkins](#Application-Deployment-flow-with-using-Jenkins)
 
 ## **Application Deployment without using Jenkins - Python**
 
@@ -255,6 +256,163 @@ Let me know:
 * Or if your app is in a different language (like Java, Node.js, etc.)
 
 I’ll guide you accordingly.
+
+## **Application Deployment flow with using Jenkins**
+
+Excellent follow-up! You're thinking like a DevOps engineer now. Let’s walk through how **CI/CD** and **Jenkins** fit into this picture.
+
+---
+
+## 🔁 What is CI/CD?
+
+* **CI (Continuous Integration):**
+  Automatically builds and tests your app every time you push code (e.g., to GitHub).
+
+* **CD (Continuous Deployment/Delivery):**
+  Automatically builds a Docker image, pushes it to JFrog, and deploys it to OpenShift.
+
+---
+
+## 🧩 Where Jenkins Fits
+
+Without Jenkins, you built the Docker image manually and deployed it step by step.
+
+But with Jenkins, all these steps are **automated**.
+
+---
+
+## 🔄 Workflow with Jenkins CI/CD
+
+Here's a typical CI/CD pipeline using Jenkins for your use case:
+
+```plaintext
+                GitHub (or GitLab)
+                       │
+                       ▼
+            ┌────────────────────┐
+            │  Jenkins Pipeline  │
+            └────────────────────┘
+               │      │       │
+               ▼      ▼       ▼
+         Build App  Run Tests  Build Docker Image
+                                 │
+                                 ▼
+                      Push to JFrog Repository
+                                 │
+                                 ▼
+                         Deploy to OpenShift
+                                 │
+                                 ▼
+                        App exposed via Route
+```
+
+---
+
+## ⚙️ Jenkins Pipeline Steps (Real Example)
+
+1. **Checkout Code**
+2. **Build App (Optional if Python/Node)**
+3. **Run Unit Tests**
+4. **Build Docker Image**
+5. **Push Docker Image to JFrog**
+6. **Deploy to OpenShift using `oc` CLI**
+
+---
+
+## 📝 Sample Jenkinsfile (Declarative Pipeline)
+
+```groovy
+pipeline {
+    agent any
+
+    environment {
+        IMAGE = "mycompany.jfrog.io/my-docker-repo/my-webapp:${BUILD_NUMBER}"
+        REGISTRY_CREDENTIALS = 'jfrog-creds' // Defined in Jenkins
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/your-org/my-webapp.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh "docker build -t ${IMAGE} ."
+                }
+            }
+        }
+
+        stage('Push to JFrog') {
+            steps {
+                script {
+                    docker.withRegistry('https://mycompany.jfrog.io', 'jfrog-creds') {
+                        sh "docker push ${IMAGE}"
+                    }
+                }
+            }
+        }
+
+        stage('Deploy to OpenShift') {
+            steps {
+                script {
+                    sh """
+                    oc project application-stage
+                    oc set image deployment/my-webapp my-webapp=${IMAGE}
+                    """
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+## 🧾 Prerequisites for Jenkins CI/CD
+
+| Requirement       | Description                                                 |
+| ----------------- | ----------------------------------------------------------- |
+| Jenkins installed | On VM, OpenShift, etc.                                      |
+| Jenkins plugins   | Docker, Git, Pipeline, Credentials                          |
+| JFrog credentials | Stored in Jenkins as secret (`jfrog-creds`)                 |
+| OpenShift access  | Jenkins must have `oc` CLI and access token                 |
+| Git repo          | Your code must be version-controlled (GitHub, GitLab, etc.) |
+
+---
+
+## 💡 Benefits of CI/CD
+
+| Without Jenkins | With Jenkins CI/CD |
+| --------------- | ------------------ |
+| Manual steps    | Fully automated    |
+| Prone to errors | Consistent builds  |
+| Slower releases | Fast delivery      |
+| No traceability | Clear audit trail  |
+
+---
+
+## 🔚 Summary
+
+You use **Jenkins CI/CD** to **automate**:
+
+* Building your app
+* Creating Docker image
+* Pushing to JFrog
+* Deploying to OpenShift
+
+Once it's set up, every code change automatically goes to production (or staging)!
+
+---
+
+Let me know:
+
+* If you want me to generate a **complete Jenkinsfile** for your Python app
+* Or if you're using **GitHub Actions** or **GitLab CI** instead of Jenkins
+
+I'll tailor the pipeline for that.
 
 
 Image
