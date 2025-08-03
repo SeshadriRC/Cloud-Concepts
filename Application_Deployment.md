@@ -1,6 +1,6 @@
 1. [Application Deployment without using Jenkins - Python](#application-deployment-without-using-jenkins---python)
 2. [Application Deployment flow with using Jenkins](#Application-Deployment-flow-with-using-Jenkins)
-3. [Application Deployment flow with using Jenkins/Helm/Argo](#Application-Deployment-flow-with-using-Jenkins-Helm-Argo)
+3. [Application Deployment flow with using Jenkins/Helm/Argo](##application-deployment-flow-with-using-jenkinshelmargo)
 
 ## **Application Deployment without using Jenkins - Python**
 
@@ -531,7 +531,7 @@ Let me know:
 
 I'll tailor the pipeline for that.
 
-3. Application Deployment flow with using Jenkins Helm Argo
+3. Application Deployment flow with using Jenkins/Helm/Argo
 
 
 Image
