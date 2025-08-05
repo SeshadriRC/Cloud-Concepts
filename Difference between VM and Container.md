@@ -10,6 +10,7 @@ The Cloud Handbook
 
 
 
+
 The Cloud Handbook
 📦 Containers vs 🔲 VMs
 What are they, fundamental difference, architecture, use cases and more.
@@ -27,6 +28,8 @@ Let’s get started…
 
 🔲 What Are Virtual Machines (VMs)?
 
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/7c8898bb-c471-4313-afb7-7ca0570aec85" />
+
 A virtual machine is basically a complete computer system running inside another computer. Think of a VM like a full apartment in a building—it comes complete with its own kitchen, bathroom, electricity, and everything else needed to function independently. Each apartment (VM) is completely separate from the others, with its own resources and utilities.
 
 Key Components of a VM
@@ -39,6 +42,9 @@ Application Layer: On top of the guest OS, you install and run your applications
 The best part of VMs is complete isolation. If one VM crashes or gets compromised, it doesn't affect the others. However, this comes at a cost—each VM requires significant resources to run its own operating system. When a VM resources are idel, another VM can not borrow that resources.
 
 📦 What are Containers?
+
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/a319ee76-d9f5-4441-a27b-7e44cfdc4668" />
+
 
 A container takes a different approach to isolation than VMs. Instead of being like a full apartment, a container is more like a room in a shared house. It's compact, lightweight, and shares some common utilities (like heating and water) with other rooms, but your personal belongings and space remain private.
 
@@ -69,8 +75,13 @@ May 28, 2024
 Read full story
 ⚖️ Key Differences: Containers vs VMs
 
+<img width="1200" height="600" alt="image" src="https://github.com/user-attachments/assets/4d9161c3-aa52-4012-b1ae-244720d198ce" />
+
+
 VMs vs Containers
 The table below shows the main differences between containers and VMs.
+
+<img width="956" height="509" alt="image" src="https://github.com/user-attachments/assets/43c25a15-9ec8-4fb3-8ed6-76db88ce179b" />
 
 
 Differences between VMs and Containers
