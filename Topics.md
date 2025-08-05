@@ -15,4 +15,5 @@
 - Secrets and its types
 - UID in pod
 
-What is rejected route
+What is REST API
+What is MCP
