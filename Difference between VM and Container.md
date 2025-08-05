@@ -1,7 +1,7 @@
+https://substack.com/home/post/p-169447424?source=queue
+
 Note
 Search Substack
-
-https://substack.com/home/post/p-169447424?source=queue
 
 
 The Cloud Handbook
