@@ -1,5 +1,8 @@
 **Topics which i learned**
 
-1. Application deployment without using jenkins
-2. Application deployment with using Jenkins/ArgoCD/Helm
-3. Machines,Nodes and Machinesets
+- Application deployment without using jenkins
+- Application deployment with using Jenkins/ArgoCD/Helm
+- Difference between VM and Containers
+   https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/Difference%20between%20VM%20and%20Container.md
+  
+- Machines,Nodes and Machinesets
