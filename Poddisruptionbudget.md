@@ -1,3 +1,6 @@
+**Article**
+https://medium.com/@muppedaanvesh/a-hand-on-guide-to-kubernetes-pod-disruption-budget-pdb-%EF%B8%8F-ebe3155a4b7c
+
 A **PodDisruptionBudget (PDB)** in Kubernetes (including OpenShift) is a **policy that limits the number of pods of a replicated application that can be voluntarily disrupted** at a time (e.g., during node drain, upgrade, etc.).
 
 ---
