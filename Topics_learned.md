@@ -7,3 +7,5 @@
 - Connection issue troubleshooting
    https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/Connection_issue.md
 - Machines,Nodes and Machinesets
+- Port forwarding
+   https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/Portforwarding.md
