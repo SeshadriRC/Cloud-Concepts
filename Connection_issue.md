@@ -7,6 +7,6 @@
 - Port-forward to tigera manager (https://localhost:9943/dashboard) succeeds and service is reachable
 - TLS certificate is valid
 
-**TLS**
+**TLS and certificate**
 
 https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/TLS%20and%20TLS-certificate.md
