@@ -13,6 +13,9 @@ It’s a Kubernetes/Openshift feature that **automatically scales the number of 
 
 ---
 
+<img width="1600" height="720" alt="image" src="https://github.com/user-attachments/assets/6ec76031-b737-4438-942e-2f9fa48fdcda" />
+
+
 ### **Basic Example**
 
 ```bash
