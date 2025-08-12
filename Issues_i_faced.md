@@ -14,6 +14,10 @@ we will ask app team to increase a ha proxy annotation timeout
 
 We will ask the app team to use correct image
 
+**Insufficient Node CPU**
+
+We will increase the machineset count to fix this issue
+
 **Probe Failures**
 
 we will ask the application team to configure probes properly
