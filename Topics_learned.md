@@ -9,6 +9,9 @@
   
 - Connection issue troubleshooting
    https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/Connection_issue.md
+
+- Git branching Strategy
+   https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/Branching_Strategies.md
   
 - Machines,Nodes and Machinesets
    https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/Machinesets.md
