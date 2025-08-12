@@ -14,10 +14,6 @@ we will ask app team to increase a ha proxy annotation timeout
 
 We will ask the app team to use correct image
 
-**Insufficient Node CPU**
-
-We will increase the machineset count to fix this issue
-
 **Probe Failures**
 
 we will ask the application team to configure probes properly
@@ -25,6 +21,16 @@ we will ask the application team to configure probes properly
 **Pod crashloopback off**
 
 We observed a CrashLoopBackOff in the pod due to an OOMKilled event. We informed the application team and instructed them to allocate sufficient memory.
+
+## Node
+
+**Insufficient Node CPU**
+
+We will increase the machineset count to fix this issue
+
+**Node stuck after draining**
+
+To fix this issue we need to delete the pods which are not properly deleted
 
 **Quota issue**
 
