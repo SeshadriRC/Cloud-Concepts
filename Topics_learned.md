@@ -15,6 +15,9 @@
   
 - Machines,Nodes and Machinesets
    https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/Machinesets.md
+
+- Pod Scenarios
+   https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/Pod_scenarios.md
   
 - Port forwarding
    https://github.com/SeshadriRC/Openshift-and-Cloud/blob/main/Portforwarding.md
