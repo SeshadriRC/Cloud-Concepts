@@ -54,6 +54,10 @@ We were unable to take a snapshot of the database as the snapshot limit (100) ha
 
 The database became inaccessible due to full storage. To resolve the issue, we increased the allocated storage, after which the database became accessible.
 
+**Subscription issue after upgrade of database**
+
+To fix this issue we have suggested user to re-subscribe the replication
+
 **Turbonomics activity**
 
 user initially allocated a **db.t4g.2xlarge** instance type to the database, anticipating high resource consumption. However, as the resource usage remained low over time, Turbonomic automatically downgraded the instance type to **db.t4g.large**.
