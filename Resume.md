@@ -54,3 +54,6 @@ What i have done
 12. User have done the upgrade, but it had not reflected in OCP console
 13. DBparametergroup quota exceeded, so we need to go AWS services and need to submit the request
 14. Worker node resizing
+    
+16. **Vault**
+    - vault mount path creation for the DB using stack id
