@@ -15,9 +15,7 @@
 - Secrets and its types
 - UID in pod
 
-**Vault**
 
-- vault mount path creation for the DB using stack id
 
 What is REST API
 What is MCP
