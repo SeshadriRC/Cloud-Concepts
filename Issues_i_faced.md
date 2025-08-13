@@ -10,6 +10,9 @@
 
 we will ask app team to increase a ha proxy annotation timeout
 
+**Cluster Upgrade**
+- Nodes are in scheduling disabled state, so upgrade not progressing. to address this issue we have set the node to scheduling enabled, then upgrade got processed. then again we set the node to scheduling disabled state
+
 **Image Pull back off**
 
 We will ask the app team to use correct image
