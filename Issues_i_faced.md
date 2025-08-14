@@ -34,11 +34,11 @@ The application team was unable to deploy the application as it required a large
 
 **Insufficient Node CPU**
 
-We will increase the machineset count to fix this issue
+- We will increase the machineset count to fix this issue
 
 **Node stuck after draining**
 
-To fix this issue we need to delete the pods which are not properly deleted
+- To fix this issue we need to delete the pods which are not properly deleted
 
 
 
