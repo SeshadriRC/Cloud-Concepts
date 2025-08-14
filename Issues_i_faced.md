@@ -40,6 +40,17 @@ The application team was unable to deploy the application as it required a large
 
 - To fix this issue we need to delete the pods which are not properly deleted
 
+### Pod
+
+**Pod restart reasons**
+
+1. LivenessProbe failure
+2. StartupProbe failure
+3. Resourcelimits exceeded(Memory/CPU)
+4. Deployment or Statefulset updates
+5. Node failure
+6. Credential Refresh failure
+7. Kubernetes or Node maintanence
 
 
 ## Database issue
