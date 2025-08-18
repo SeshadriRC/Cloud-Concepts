@@ -46,6 +46,10 @@ What i have done
 11. Cordon/drain the node
 14. Worker node resizing
 
+**Argo**
+
+- Argo install and Upgrade
+
 **OCP**
 
 - Pod got in stuck state , so i terminated gracefully
