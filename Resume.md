@@ -68,7 +68,7 @@ What i have done
 
 - Namespace deletion
 
-**RDS**
+## RDS
 
 - DB parameter group creation
 - Provision of resource using cloud formation
@@ -76,7 +76,7 @@ What i have done
 - RDS DB creation and Deletion using cloudformation template
 - User have done the upgrade, but it had not reflected in OCP console, so i will do troubleshooting
 
-**Vault**
+## Vault
 - vault mount path creation for the DB using stack id
 - Provided credentials of database using hashicorp
     
