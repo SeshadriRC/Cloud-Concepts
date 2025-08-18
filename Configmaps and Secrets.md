@@ -110,3 +110,40 @@ env:
 | Access control | Normal                     | More restricted (RBAC recommended) |
 
 ---
+
+In **OpenShift** (and Kubernetes), a **pull secret** is a credential that allows the cluster to authenticate to a container registry in order to pull images.
+
+The **default-generated pull secret** is the one that OpenShift automatically creates for every new project/namespace. It’s called:
+
+```
+default-dockercfg-<random_suffix>
+```
+
+### Key Points:
+
+* It is **automatically generated** by OpenShift when a new namespace is created.
+* It contains a reference to the cluster-wide **global pull secret** (`/var/lib/kubelet/config.json`) that was configured during OpenShift installation.
+* It allows workloads (Pods, Deployments, etc.) in that namespace to pull images from:
+
+  * The **internal OpenShift registry** (so apps can pull images built and pushed by Builds or Pipelines).
+  * Any external registries specified in the cluster’s global pull secret (e.g., `quay.io`, `registry.redhat.io`, or private registries).
+* The service account `default` in each namespace automatically gets this pull secret attached, meaning **Pods can pull images without you explicitly creating a secret**.
+
+👉 Example:
+
+```bash
+oc get secrets
+```
+
+Might show:
+
+```
+NAME                         TYPE                                  DATA   AGE
+default-dockercfg-abc12      kubernetes.io/dockercfg               1      2m
+```
+
+So, in short:
+🔹 **default-generated pull secret** = namespace-level secret that lets pods pull images using the cluster’s global authentication.
+
+
+
