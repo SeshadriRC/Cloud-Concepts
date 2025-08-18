@@ -41,20 +41,32 @@
 
 What i have done
 4. S3 bucket creation, uploading dumps in S3 bucket and deletion of files
-6. Namespace deletion
-7. Roles and Rolebinding creation
-11. Cordon/drain the node
-14. Worker node resizing
 
-**Argo**
+
+## Argo
 
 - Argo install and Upgrade
 
-**OCP**
+## OCP
 
-- Pod got in stuck state , so i terminated gracefully
+### User Management
+
+- Roles and Rolebinding creation
+
+### Compute
+
 - Quota modifictions ( from small to large )
 - Scale up the machineset because of insufficient CPU
+- Cordon/drain the node
+- Worker node resizing
+
+### Workloads
+
+- Pod got in stuck state , so i terminated gracefully
+
+### Administration
+
+- Namespace deletion
 
 **RDS**
 
