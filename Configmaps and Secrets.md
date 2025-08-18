@@ -31,6 +31,8 @@ data:
 
 ---
 
+
+
 ## 🔹 What is a **Secret**?
 
 A **Secret** is like a ConfigMap but used to store **sensitive data**, such as:
@@ -110,6 +112,8 @@ env:
 | Access control | Normal                     | More restricted (RBAC recommended) |
 
 ---
+
+**default-generated pull secret**
 
 In **OpenShift** (and Kubernetes), a **pull secret** is a credential that allows the cluster to authenticate to a container registry in order to pull images.
 
