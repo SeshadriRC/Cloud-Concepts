@@ -40,20 +40,27 @@
 - Good Knowledge on narrowing down the RCA's.
 
 What i have done
-1. Pod got in stuck state , so i terminated gracefully
-2. Provided credentials of database using hashicorp
-3. Provision of resource using cloud formation
 4. S3 bucket creation, uploading dumps in S3 bucket and deletion of files
-5. Quota modifictions ( from small to large )
 6. Namespace deletion
 7. Roles and Rolebinding creation
-8. Scale up the machineset because of insufficient CPU
-9. RDS DB creation and Deletion using cloudformation template
-10. DB parameter group creation
 11. Cordon/drain the node
-12. User have done the upgrade, but it had not reflected in OCP console
-13. DBparametergroup quota exceeded, so we need to go AWS services and need to submit the request
 14. Worker node resizing
+
+**OCP**
+
+- Pod got in stuck state , so i terminated gracefully
+- Quota modifictions ( from small to large )
+- Scale up the machineset because of insufficient CPU
+
+**RDS**
+
+- DB parameter group creation
+- Provision of resource using cloud formation
+- DBparametergroup quota exceeded, so we need to go AWS services and need to submit the request
+- RDS DB creation and Deletion using cloudformation template
+- User have done the upgrade, but it had not reflected in OCP console, so i will do troubleshooting
+
+**Vault**
+- vault mount path creation for the DB using stack id
+- Provided credentials of database using hashicorp
     
-16. **Vault**
-    - vault mount path creation for the DB using stack id
