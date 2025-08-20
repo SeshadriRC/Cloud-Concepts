@@ -1,3 +1,4 @@
+- Affinity ( Pod and Node )
 - Ephemeral Storage
 - Deployment Strategies
 - HA proxy
