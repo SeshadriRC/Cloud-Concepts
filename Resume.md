@@ -99,3 +99,36 @@ Logging: Fluentd, EFK Stack, Loki
 CI/CD: Jenkins, GitLab CI, ArgoCD, Tekton
 Automation: Ansible, Terraform
 Security: Vault, SCCs, RBAC, NetworkPolicies
+
+**EPAM 30 LPA (8-13 years)**
+
+Job description
+We are seeking an experienced Lead OpenShift Administrator to design, deploy, and manage our enterprise OpenShift clusters. The role requires deep expertise in Linux administration, container orchestration, and CI/CD pipelines (GitLab CI). You will lead a small team of engineers, ensure high availability of platforms, and drive automation across the environment.
+
+Key Responsibilities
+
+Lead the administration, configuration, and optimization of OpenShift Container Platform (OCP) clusters in production and non-production environments.
+
+Oversee cluster installation, upgrades, scaling, patching, and monitoring.
+
+Manage Linux-based infrastructure (RHEL or CentOS) supporting OpenShift.
+
+Integrate OpenShift with enterprise services (networking, storage, logging, monitoring, security).
+
+Design, implement, and manage CI/CD pipelines using GitLab CI to support application deployments.
+
+Mentor and guide junior administrators/engineers on OpenShift and DevOps practices.
+
+Collaborate with developers, DevOps, and cloud engineering teams for continuous improvements.
+
+Required Skills & Experience
+
+8+ years of experience in Linux system administration (RHEL preferred).
+
+6+ years of hands-on experience with OpenShift / Kubernetes administration.
+
+Strong knowledge of GitLab CI/CD pipelines (runners, jobs, stages, deployment automation).
+
+Proficiency in container technologies (Docker, Podman, CRI-O).
+
+Experience with Helm, Operators, and OpenShift templates.
