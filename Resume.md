@@ -79,4 +79,23 @@ What i have done
 ## Vault
 - vault mount path creation for the DB using stack id
 - Provided credentials of database using hashicorp
-    
+
+
+
+**Techmahindra**
+
+Analyze and resolve platform issues related to workloads, PVCs, ingress, services, and image registries.
+Implement configuration changes via YAML/Helm/Kustomize.
+Maintain Operators, upgrade OpenShift clusters, and validate post-patching health.
+Work with CI/CD pipelines and DevOps teams for build & deploy troubleshooting.
+Manage and automate namespace provisioning, RBAC, Network Policies.
+Maintain logs, monitoring, and alerting tools (Prometheus, EFK, Grafana).
+Participate in CR and patch planning cycles.
+Core Tools & Technology Stack
+Container Platform: OpenShift v4.x, Kubernetes
+CLI Tools: oc, kubectl, Helm, Kustomize
+Monitoring: Prometheus, Grafana, Thanos
+Logging: Fluentd, EFK Stack, Loki
+CI/CD: Jenkins, GitLab CI, ArgoCD, Tekton
+Automation: Ansible, Terraform
+Security: Vault, SCCs, RBAC, NetworkPolicies
