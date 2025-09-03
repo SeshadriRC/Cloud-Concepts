@@ -132,3 +132,23 @@ Strong knowledge of GitLab CI/CD pipelines (runners, jobs, stages, deployment au
 Proficiency in container technologies (Docker, Podman, CRI-O).
 
 Experience with Helm, Operators, and OpenShift templates.
+
+
+**Tech mahindra devops**
+```
+Docker containerization.
+Kubernetes orchestration.
+AWS Cloud Services (EC2, VPC, Lambda, S3, RDS, etc.).
+Python (Boto3) for AWS automation.
+Groovy scripting (preferably for Jenkins pipelines).
+Solid understanding of network infrastructure setup on AWS, including VPC, NAT Gateways, Load Balancers, etc.
+Hands-on experience with Infrastructure as Code (CloudFormation or Terraform).
+Experience working with CI/CD tools like Jenkins, GitLab CI/CD, or similar.
+Familiarity with monitoring/logging tools (CloudWatch, Prometheus, Grafana, etc.).
+Good to Have:
+
+AWS certification (AWS Certified DevOps Engineer or Solutions Architect).
+Knowledge of security best practices in cloud infrastructure.
+Exposure to other scripting languages (Shell, Bash).
+Experience working in agile delivery teams
+```
