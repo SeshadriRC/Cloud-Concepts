@@ -152,3 +152,29 @@ Knowledge of security best practices in cloud infrastructure.
 Exposure to other scripting languages (Shell, Bash).
 Experience working in agile delivery teams
 ```
+**Luxsoft Devops**
+```
+Project description
+Join the exciting team that performs change work at one of the Big Four banks of Australia. Looking for a highly skilled Python/Bash/Groovy developer having 7+ years of hands-on experience in designing, developing & maintaining backend systems. Should also have hands-on experience with tools like Jenkins, GitHub/Git Action, and Codefresh. You will be able to manage source code with GIT and work on it. You should have Knowledge of YAML & JSON. You will be required to work in squads under our customers' direction and have a level of familiarization with Agile methodologies. Responsibilities
+Able to design, develop & maintain complex backend services and applications using Python/Bash/Groovy
+Able to perform system administration tasks on Linux/Unix
+Should be able to perform cloud-based development with services like AWS, Azure, or Google Cloud
+Manage IaC tools like Terraform or CloudFormation
+Familiarity with tools for monitoring and logging infrastructure
+Able to understand security practices and tools HashiCorp Vault Skills
+Must have
+Overall, 7+ years of experience as a DevOps Engineer.
+Programming and ScriptingProficiency in Python for automation
+CI/CD PipelinesUnderstanding Continuous Integration and Continuous Deployment processes, along with tools like Jenkins, GitHub/Git Action, and Codefresh.
+ContainerizationUnderstanding container technologies like Docker and orchestration tools like Kubernetes.
+Version ControlExperience with Git for managing source code.
+Configuration ManagementExperience with tools like YAML, JSON.
+Nice to have
+Linux/UNIX FundamentalsUnderstanding Linux for System Administration Tasks
+Bash, or Groovy for automation.
+Cloud PlatformsKnowledge of cloud services like AWS or Azure, or Google Cloud
+Infrastructure as Code (IaC)Experience with IaC tools like Terraform or CloudFormation
+Monitoring and LoggingFamiliarity with tools for monitoring and logging infrastructure
+SecurityUnderstanding security practices and tools
+HashiCorp Vault
+```
