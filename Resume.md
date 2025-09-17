@@ -178,3 +178,24 @@ Monitoring and LoggingFamiliarity with tools for monitoring and logging infrastr
 SecurityUnderstanding security practices and tools
 HashiCorp Vault
 ```
+**NPCI**
+```
+DevOps for applications focuses on streamlining and automating the development, deployment, and maintenance processes.
+Here’s a high-level overview: Key DevOps Practices for Application Development
+1. Continuous Integration/Continuous Deployment (CI/CD)
+• Automates the process of integrating code changes and deploying them to production.
+• Tools: Jenkins, GitHub Actions, GitLab CI, CircleCI.
+
+2. Infrastructure as Code (IaC)
+• Manages infrastructure using code to ensure consistency and repeatability.
+• Tools: Terraform, AWS CloudFormation, Ansible.
+
+3. Containerization and Orchestration
+• Packages applications in containers for consistency across environments.
+• Orchestration tools manage container deployment.
+• Tools: Docker, Kubernetes.
+
+4. Monitoring and Logging
+• Provides visibility into application performance and system health.
+• Tools: Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana
+```
