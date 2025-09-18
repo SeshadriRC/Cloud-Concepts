@@ -52,6 +52,7 @@ The application team was unable to deploy the application as it required a large
 6. Credential Refresh failure
 7. Kubernetes or Node maintanence
 
+- We noticed a CPU utilization by the Pod which created by cronjob, so to address this issue we have suspended the cronjob post taht issue got fixed
 
 ## Database issue
 
